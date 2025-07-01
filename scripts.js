@@ -19,7 +19,7 @@ function checkTime(i) {
     return i;
 }
 
-var dd = today.getDay();
+var dd = today.getDate();
 var mm = today.getMonth() + 1;
 var yyyy = today.getFullYear();
 
