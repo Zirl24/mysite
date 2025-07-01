@@ -1,3 +1,6 @@
+var sp = "."
+var today = new Date();
+
 /* --- FUNCTION FOR THE CLOCK --- */
 
 function startTime() {
@@ -16,5 +19,17 @@ function checkTime(i) {
     return i;
 }
 
+var dd = today.getDay();
+var mm = today.getMonth() + 1;
+var yyyy = today.getFullYear();
+
+if(dd < 10) {
+    dd = '0' + dd;
+};
+if(mm < 10) {
+    mm = '0' + mm;
+};
+
+$("#date").html(mm+sp+dd+sp+yyyy)
 
 
