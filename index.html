@@ -44,6 +44,15 @@
 </body>
 
 <script>
+try {
+    var loadNotes = localStorage.getItem("notes");
+}
+catch(err) {
+    var loadNotes = 'Enter your notes here and click "Save"';
+}
+
+$("#note-area").val(loadNotes);
+
 var sp = "."
 var today = new Date();
 var dd = today.getDate();
@@ -58,6 +67,11 @@ if(mm < 10) {
 };
 
 $("#date").html(mm+sp+dd+sp+yyyy)
+
+$("#saveNoteBtn").click(function(){
+    var currentNotes = $("#note-area").val();
+    localStorage.setItem("notes", currentNotes);
+});
 </script>
 </html>
 
