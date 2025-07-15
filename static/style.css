@@ -101,7 +101,14 @@ h1{
     border-radius: 10px;
 }
 
+.center {
+    margin-left: 50%;
+    margin-right: 50%;
+}
 
-
-
+.weekday {
+    width: 20vw;
+    height: 20vh;
+    border-radius: 4px;
+}
 
